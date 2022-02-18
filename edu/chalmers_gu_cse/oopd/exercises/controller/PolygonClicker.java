@@ -10,11 +10,11 @@ import java.awt.event.*;
 /**
  * Created by Niklas on 2016-02-21.
  */
-public class PolygonController {
+public class PolygonClicker {
 
     private final PolygonModel model;
 
-    public PolygonController(PolygonModel model, PolygonViewer view) {
+    public PolygonClicker(PolygonModel model, PolygonViewer view) {
         this.model = model;
         initInteraction(view);
     }

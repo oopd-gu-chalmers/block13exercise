@@ -1,5 +1,5 @@
 /* This is now all we (can) use from the sub-package */
-import edu.chalmers_gu_cse.oopd.exercises.controller.PolygonController;
+import edu.chalmers_gu_cse.oopd.exercises.controller.PolygonClicker;
 import edu.chalmers_gu_cse.oopd.exercises.polygonModel.PolygonModel;
 import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygons.PolygonFactory;
 import edu.chalmers_gu_cse.oopd.exercises.view2d.PolygonViewer;
@@ -14,7 +14,7 @@ public class DrawPolygons {
     public static void main(String[] args) {
         PolygonModel polygons = initModel();
         PolygonViewer view = initViewForModel(polygons);
-        PolygonController controller = new PolygonController(polygons, view);
+        PolygonClicker controller = new PolygonClicker(polygons, view);
 
         polygons.animate();
 
