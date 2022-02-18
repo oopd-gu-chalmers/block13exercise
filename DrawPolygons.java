@@ -1,15 +1,26 @@
 /* This is now all we (can) use from the sub-package */
-import polygons.IPolygon;
-import polygons.PolygonFactory;
+import edu.chalmers_gu_cse.oopd.exercises.controller.PolygonController;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.PolygonModel;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygons.PolygonFactory;
+import edu.chalmers_gu_cse.oopd.exercises.view2d.PolygonViewer;
 
-/* By commenting out the imports above, and instead importing the adapter package,
- * we effectively switch to using the DIT952.shapes package.
+/* By commenting out the imports above, and instead importing the edu.chalmers_gu_cse.oopd.exercises.polygonModel.adapter package,
+ * we effectively switch to using the DIT952.edu.chalmers_gu_cse.oopd.exercises.polygonModel.shapes package.
  */
-// import DIT952.adapter.*;
+// import DIT952.edu.chalmers_gu_cse.oopd.exercises.polygonModel.adapter.*;
 
 public class DrawPolygons {
 
-    public static PolygonModel initPolygons(){
+    public static void main(String[] args) {
+        PolygonModel polygons = initModel();
+        PolygonViewer view = initViewForModel(polygons);
+        PolygonController controller = new PolygonController(polygons, view);
+
+        polygons.animate();
+
+    }//main
+
+    public static PolygonModel initModel(){
         PolygonModel polygons = new PolygonModel();
 
         polygons.addPolygon(PolygonFactory.createSquare(50,50));
@@ -17,17 +28,15 @@ public class DrawPolygons {
         polygons.addPolygon(PolygonFactory.createRectangle(50,150));
 
         return polygons;
+    }
 
-    }//constructor
-
-    public static void main(String[] args) {
-        PolygonModel polygons = initPolygons();
+    private static PolygonViewer initViewForModel(PolygonModel polygonModel) {
         PolygonViewer view = new PolygonViewer();
-        view.add(polygons);
-        PolygonController controller = new PolygonController(polygons, view);
+        view.addModel(polygonModel);
+        polygonModel.addListener(view);
+        return view;
+    }
 
-        polygons.animate();
 
-    }//main
 
 }//DIT952.DrawPolygons
