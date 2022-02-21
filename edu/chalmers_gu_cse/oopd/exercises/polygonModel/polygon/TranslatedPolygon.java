@@ -17,22 +17,6 @@ class TranslatedPolygon extends AbstractManipulatedPolygon implements IPolygon {
     }
 
     @Override
-    public IPolygon translate(int x, int y) {
-        // TODO: This is for you to implement
-        return null;
-    }
-    @Override
-    public IPolygon rotate(double radians) {
-        // TODO: This is for you to implement
-        return null;
-    }
-    @Override
-    public IPolygon scale(double x, double y) {
-        // TODO: This is for you to implement
-        return null;
-    }
-
-    @Override
     protected void manipulatePoint(Point center, Point p) {
         p.x += this.xMove;
         p.y += this.yMove;

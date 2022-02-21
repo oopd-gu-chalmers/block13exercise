@@ -42,4 +42,20 @@ abstract class AbstractPolygon extends JComponent implements IPolygon {
 
     protected abstract List<Point> getPoints();
 
+    @Override
+    public IPolygon translate(int x, int y) {
+        // TODO: This is for you to implement
+        return new TranslatedPolygon(this, x, y);
+    }
+    @Override
+    public IPolygon rotate(double radians) {
+        // TODO: This is for you to implement
+        return new RotatedPolygon(this, radians);
+    }
+    @Override
+    public IPolygon scale(double x, double y) {
+        // TODO: This is for you to implement
+        return new ScaledPolygon(this, x, y);
+    }
+
 }

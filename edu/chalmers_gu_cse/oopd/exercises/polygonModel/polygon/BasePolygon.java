@@ -25,21 +25,6 @@ class BasePolygon extends AbstractPolygon implements IPolygon {
         centerPoint = calculateCenterPoint(this.points);
     }
 
-    @Override
-    public IPolygon translate(int x, int y) {
-        // TODO: This is for you to implement
-        return null;
-    }
-    @Override
-    public IPolygon rotate(double radians) {
-        // TODO: This is for you to implement
-        return null;
-    }
-    @Override
-    public IPolygon scale(double x, double y) {
-        // TODO: This is for you to implement
-        return null;
-    }
 
     @Override
     public List<Point> getPoints() {

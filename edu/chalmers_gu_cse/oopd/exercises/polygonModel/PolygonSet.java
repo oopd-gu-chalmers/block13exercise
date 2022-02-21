@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /* package-private */ class PolygonSet extends JComponent {
-    private final List<IPolygon> polygons = new ArrayList<>();
+    private List<IPolygon> polygons = new ArrayList<>();
     public void addPolygon(IPolygon p){
         polygons.add(p);
     }
@@ -20,12 +20,17 @@ import java.util.List;
     }
 
     public void translate(int x, int y){
-        for (IPolygon p: polygons){
-            // This still violates Law of Demeter!
-            // We don't want the extra dependency on Point!!
+        /* Vår gamla kod, med muterbara shapes
+        for (IPolygon p : polygons) {
             p.translate(x,y);
         }
-
+         */
+        // Vår nya kod, som använder mutate-by-copy
+        List<IPolygon> translated = new ArrayList<>();
+        for (IPolygon p : polygons) {
+            IPolygon q = p.translate(x,y);
+            translated.add(q);
+        }
+        this.polygons = translated;
     }
-
 }

@@ -15,19 +15,6 @@ class ScaledPolygon extends AbstractManipulatedPolygon implements IPolygon {
         this.yFactor = yFactor;
     }
 
-    @Override
-    public IPolygon translate(int x, int y) {
-        return null;
-    }
-    @Override
-    public IPolygon rotate(double radians) {
-        return null;
-    }
-    @Override
-    public IPolygon scale(double x, double y) {
-        return null;
-    }
-
     protected void manipulatePoint(Point center, Point point) {
         double newX = (point.x-center.x)*xFactor + center.x;
         double newY = (point.y-center.y)*yFactor + center.y;
