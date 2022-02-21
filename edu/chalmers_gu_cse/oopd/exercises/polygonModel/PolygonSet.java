@@ -1,6 +1,6 @@
 package edu.chalmers_gu_cse.oopd.exercises.polygonModel;
 
-import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygons.IPolygon;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.IPolygon;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +13,7 @@ import java.util.List;
         polygons.add(p);
     }
 
-    public void paint(Graphics g) {
+    public void paint(Graphics g){
         for (IPolygon polygon : polygons) {
             polygon.paint(g);
         }
@@ -23,7 +23,7 @@ import java.util.List;
         for (IPolygon p: polygons){
             // This still violates Law of Demeter!
             // We don't want the extra dependency on Point!!
-            p.updateCenter(p.getCenter().x+x, p.getCenter().y+y);
+            p.translate(x,y);
         }
 
     }

@@ -1,7 +1,7 @@
 /* This is now all we (can) use from the sub-package */
 import edu.chalmers_gu_cse.oopd.exercises.controller.PolygonClicker;
 import edu.chalmers_gu_cse.oopd.exercises.polygonModel.PolygonModel;
-import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygons.PolygonFactory;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.PolygonFactory;
 import edu.chalmers_gu_cse.oopd.exercises.view2d.PolygonViewer;
 
 /* By commenting out the imports above, and instead importing the edu.chalmers_gu_cse.oopd.exercises.polygonModel.adapter package,
@@ -28,15 +28,13 @@ public class DrawPolygons {
         polygons.addPolygon(PolygonFactory.createRectangle(50,150));
 
         return polygons;
-    }
+    }//initModel
 
     private static PolygonViewer initViewForModel(PolygonModel polygonModel) {
         PolygonViewer view = new PolygonViewer();
         view.addModel(polygonModel);
         polygonModel.addListener(view);
         return view;
-    }
+    }//initViewForModel
 
-
-
-}//DIT952.DrawPolygons
+}//DrawPolygons

@@ -1,7 +1,7 @@
 package edu.chalmers_gu_cse.oopd.exercises.controller;
 
 import edu.chalmers_gu_cse.oopd.exercises.polygonModel.PolygonModel;
-import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygons.PolygonFactory;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.PolygonFactory;
 import edu.chalmers_gu_cse.oopd.exercises.view2d.PolygonViewer;
 
 import java.awt.*;

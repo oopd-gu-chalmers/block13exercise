@@ -1,6 +1,6 @@
 package edu.chalmers_gu_cse.oopd.exercises.polygonModel;
 
-import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygons.IPolygon;
+import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.IPolygon;
 
 import javax.swing.*;
 import java.awt.*;
