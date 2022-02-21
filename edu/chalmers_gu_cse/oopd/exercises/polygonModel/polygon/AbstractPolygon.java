@@ -23,39 +23,14 @@ abstract class AbstractPolygon extends JComponent implements IPolygon {
         }
     }
 
-    // Here's is a method, which, together with manipulatePoint, forms
-    // a Template Method Pattern. This is the template method in question.
-    protected List<Point> getPointsWithBase(AbstractPolygon base) {
-        List<Point> points = base.getPoints();
-        Point center = getCenterPoint();
-        for (Point p : points){
-            manipulatePoint(center, p);
-        }
-        return points;
-    }
-    // The core of our new model for polygons, where each kind of
-    // manipulation is handled by a different class, which implements
-    // the following method.
-    // This represents the "hole" in the template, that
-    // we expect subclasses to fill with their own behavior.
-    protected abstract void manipulatePoint(Point center, Point p);
-
     protected abstract List<Point> getPoints();
 
     @Override
-    public IPolygon translate(int x, int y) {
-        // TODO: This is for you to implement
-        return new TranslatedPolygon(this, x, y);
-    }
-    @Override
-    public IPolygon rotate(double radians) {
-        // TODO: This is for you to implement
-        return new RotatedPolygon(this, radians);
-    }
-    @Override
-    public IPolygon scale(double x, double y) {
-        // TODO: This is for you to implement
-        return new ScaledPolygon(this, x, y);
-    }
+    public abstract AbstractPolygon translate(int x, int y);
 
+    @Override
+    public abstract AbstractPolygon rotate(double radians);
+
+    @Override
+    public abstract AbstractPolygon scale(double x, double y);
 }

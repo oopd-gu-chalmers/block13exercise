@@ -34,18 +34,26 @@ class BasePolygon extends AbstractPolygon implements IPolygon {
     }
 
     @Override
-    // Fill the hole in getPointsWithBase from the superclass
-    protected void manipulatePoint(Point center, Point p) {
-        // In BasePolygon, we don't do manipulations,
-        // that's kind of the whole point.
-    }
-
-    @Override
     public Point getCenterPoint() {
         // defensive copying before handing it out
         return new Point(centerPoint);
     }
 
+    @Override
+    public AbstractPolygon translate(int x, int y) {
+        // TODO: For you to implement
+        return null;
+    }
+    @Override
+    public AbstractPolygon rotate(double radians) {
+        // TODO: For you to implement
+        return null;
+    }
+    @Override
+    public AbstractPolygon scale(double x, double y) {
+        // TODO: For you to implement
+        return null;
+    }
 
     /* Simple static helper functions */
     // defensive copying of all points in a list
