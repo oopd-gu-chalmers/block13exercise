@@ -22,6 +22,12 @@ class TranslatedPolygon extends ManipulatedPolygon implements IPolygon {
     }
 
     @Override
+    public IPolygon translate(int x, int y) {
+        // TODO: Override with better behavior
+        return super.translate(x, y);
+    }
+
+    @Override
     public Point getCenterPoint() {
         // the centerpoint from base is already defensively copied,
         // so we can safely mutate it here.

@@ -14,6 +14,12 @@ class ScaledPolygon extends ManipulatedPolygon implements IPolygon {
         this.yFactor = yFactor;
     }
 
+    @Override
+    public IPolygon scale(double x, double y) {
+        // TODO: Override with better behavior
+        return super.scale(x, y);
+    }
+
     protected void manipulatePoint(Point center, Point point) {
         double newX = (point.x-center.x)*xFactor + center.x;
         double newY = (point.y-center.y)*yFactor + center.y;

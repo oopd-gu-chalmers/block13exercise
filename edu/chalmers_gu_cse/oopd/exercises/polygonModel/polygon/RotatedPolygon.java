@@ -13,6 +13,11 @@ class RotatedPolygon extends ManipulatedPolygon implements IPolygon {
         this.radians = radians;
     }
 
+    @Override
+    public IPolygon rotate(double radians) {
+        // TODO: Override with better behavior
+        return super.rotate(radians);
+    }
 
     @Override
     protected void manipulatePoint(Point center, Point p) {
