@@ -3,10 +3,10 @@ package edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon;
 import java.awt.*;
 import java.util.List;
 
-public abstract class AbstractManipulatedPolygon extends AbstractPolygon {
+public abstract class ManipulatedPolygon extends AbstractPolygon {
     private AbstractPolygon base;
 
-    protected AbstractManipulatedPolygon(AbstractPolygon base){
+    protected ManipulatedPolygon(AbstractPolygon base){
         this.base = base;
     }
 

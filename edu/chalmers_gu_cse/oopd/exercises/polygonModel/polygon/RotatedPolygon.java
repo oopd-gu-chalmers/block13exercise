@@ -1,12 +1,11 @@
 package edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon;
 
 import java.awt.*;
-import java.util.List;
 
 /**
  * Created by Niklas on 2016-02-28.
  */
-class RotatedPolygon extends AbstractManipulatedPolygon implements IPolygon {
+class RotatedPolygon extends ManipulatedPolygon implements IPolygon {
     private double radians;
 
     RotatedPolygon(AbstractPolygon base, double radians) {

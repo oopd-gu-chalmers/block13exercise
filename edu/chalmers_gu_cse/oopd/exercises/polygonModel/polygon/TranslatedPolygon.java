@@ -1,12 +1,11 @@
 package edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon;
 
 import java.awt.*;
-import java.util.List;
 
 /**
  * Created by Niklas on 2016-02-28.
  */
-class TranslatedPolygon extends AbstractManipulatedPolygon implements IPolygon {
+class TranslatedPolygon extends ManipulatedPolygon implements IPolygon {
     int xMove;
     int yMove;
 

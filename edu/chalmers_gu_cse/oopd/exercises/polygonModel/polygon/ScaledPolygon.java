@@ -1,12 +1,11 @@
 package edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon;
 
 import java.awt.*;
-import java.util.List;
 
 /**
  * Created by Niklas on 2016-02-28.
  */
-class ScaledPolygon extends AbstractManipulatedPolygon implements IPolygon {
+class ScaledPolygon extends ManipulatedPolygon implements IPolygon {
     double xFactor, yFactor;
 
     ScaledPolygon(AbstractPolygon base, double xFactor, double yFactor) {
