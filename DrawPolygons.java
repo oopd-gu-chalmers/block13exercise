@@ -33,6 +33,7 @@ public class DrawPolygons {
     private static PolygonViewer initViewForModel(PolygonModel polygonModel) {
         PolygonViewer view = new PolygonViewer();
         view.addModel(polygonModel);
+        polygonModel.addListener(view);
         return view;
     }//initViewForModel
 
