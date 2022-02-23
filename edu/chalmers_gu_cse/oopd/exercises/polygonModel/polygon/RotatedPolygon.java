@@ -15,8 +15,8 @@ class RotatedPolygon extends ManipulatedPolygon implements IPolygon {
 
     @Override
     public IPolygon rotate(double radians) {
-        // TODO: Override with better behavior
-        return super.rotate(radians);
+        this.radians += radians;
+        return this;
     }
 
     @Override
