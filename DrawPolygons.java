@@ -4,11 +4,6 @@ import edu.chalmers_gu_cse.oopd.exercises.polygonModel.PolygonModel;
 import edu.chalmers_gu_cse.oopd.exercises.polygonModel.polygon.PolygonFactory;
 import edu.chalmers_gu_cse.oopd.exercises.view2d.PolygonViewer;
 
-/* By commenting out the imports above, and instead importing the edu.chalmers_gu_cse.oopd.exercises.polygonModel.adapter package,
- * we effectively switch to using the DIT952.edu.chalmers_gu_cse.oopd.exercises.polygonModel.shapes package.
- */
-// import DIT952.edu.chalmers_gu_cse.oopd.exercises.polygonModel.adapter.*;
-
 public class DrawPolygons {
 
     public static void main(String[] args) {

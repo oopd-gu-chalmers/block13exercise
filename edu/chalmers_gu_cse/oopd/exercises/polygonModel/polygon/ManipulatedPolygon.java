@@ -18,17 +18,17 @@ public abstract class ManipulatedPolygon extends AbstractPolygon {
     // TODO: For a challenge, how can we avoid the casts in these
     //       three method implementations? Hint: covariance...
     @Override
-    public IPolygon translate(int x, int y) {
+    public Polygon translate(int x, int y) {
         setBasePolygon( (AbstractPolygon) base.translate(x, y));
         return this;
     }
     @Override
-    public IPolygon rotate(double radians) {
+    public Polygon rotate(double radians) {
         setBasePolygon( (AbstractPolygon) base.rotate(radians));
         return this;
     }
     @Override
-    public IPolygon scale(double x, double y) {
+    public Polygon scale(double x, double y) {
         setBasePolygon( (AbstractPolygon) base.scale(x, y));
         return this;
      }

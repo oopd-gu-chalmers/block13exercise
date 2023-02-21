@@ -5,7 +5,7 @@ import java.awt.*;
 /**
  * Created by Niklas on 2016-02-28.
  */
-class TranslatedPolygon extends ManipulatedPolygon implements IPolygon {
+class TranslatedPolygon extends ManipulatedPolygon implements Polygon {
     int xMove;
     int yMove;
 
@@ -22,7 +22,7 @@ class TranslatedPolygon extends ManipulatedPolygon implements IPolygon {
     }
 
     @Override
-    public IPolygon translate(int x, int y) {
+    public Polygon translate(int x, int y) {
         // TODO: Override with better behavior
         return super.translate(x, y);
     }

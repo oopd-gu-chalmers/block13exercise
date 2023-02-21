@@ -5,7 +5,7 @@ import java.awt.*;
 /**
  * Created by Niklas on 2016-02-28.
  */
-class ScaledPolygon extends ManipulatedPolygon implements IPolygon {
+class ScaledPolygon extends ManipulatedPolygon implements Polygon {
     double xFactor, yFactor;
 
     ScaledPolygon(AbstractPolygon base, double xFactor, double yFactor) {
@@ -15,7 +15,7 @@ class ScaledPolygon extends ManipulatedPolygon implements IPolygon {
     }
 
     @Override
-    public IPolygon scale(double x, double y) {
+    public Polygon scale(double x, double y) {
         // TODO: Override with better behavior
         return super.scale(x, y);
     }
